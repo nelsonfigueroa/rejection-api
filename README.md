@@ -1,6 +1,6 @@
 # Rejection API
 
-Simple API built on Ruby on Rails. The API returns a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
+Simple JSON API built on Ruby on Rails. The API returns a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
 
 # Running the API
 
@@ -20,17 +20,17 @@ Now you can make API calls to [127.0.0.1:3000/rejection](http://127.0.0.1:3000/r
 
 | HTTP Verb | Endpoint   | Description                    |
 |-----------|------------|--------------------------------|
-| GET       | /rejection | Get a random rejection message |
-| POST      | /rejection | Create a rejection message     |
+| GET       | /rejections | Get a random rejection message |
+| POST      | /rejections | Create a rejection message     |
 
 **Examples:**
 
 Get a random rejection
 ```
-curl 127.0.0.1:3000/rejection
+curl 127.0.0.1:3000/rejections
 ```
 
 Create a rejection
 ```
-curl -d 'message=Sorry college did not prepare you, but we do not want to train anyone. Good luck!' -X POST 127.0.0.1:3000/rejection
+curl -d 'message=Sorry college did not prepare you, but we do not want to train anyone. Good luck!' -X POST 127.0.0.1:3000/rejections
 ```
