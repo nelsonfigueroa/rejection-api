@@ -10,7 +10,7 @@ class RejectionsController < ApplicationController
     @rejection = Rejection.new(rejection_params)
 
     if @rejection.save
-      render json: @rejection, status: :created#, location: @rejection
+      render json: @rejection, status: :created, location: rejections_url(@rejection)
     else
       render json: @rejection.errors, status: :unprocessable_entity
     end
