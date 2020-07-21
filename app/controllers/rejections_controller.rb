@@ -5,7 +5,7 @@ class RejectionsController < ApplicationController
     render json: Rejection.all.sample.message
   end
 
-  # POST /rejections
+  # POST /rejection
   def create
     @rejection = Rejection.new(rejection_params)
 
@@ -17,7 +17,6 @@ class RejectionsController < ApplicationController
   end
 
   private
-    # Only allow a trusted parameter "white list" through.
     def rejection_params
       params.require(:rejection).permit(:message)
     end
