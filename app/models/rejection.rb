@@ -1,0 +1,2 @@
+class Rejection < ApplicationRecord
+end

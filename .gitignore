@@ -8,7 +8,6 @@
 /.bundle
 
 # Ignore the default SQLite database.
-/db/*.sqlite3
 /db/*.sqlite3-journal
 /db/*.sqlite3-*
 
@@ -30,3 +29,5 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+.DS_Store
