@@ -19,5 +19,7 @@ RUN rm -rf /usr/local/bundle/cache/*.gem \
 
 COPY . .
 
+RUN rails db:setup
+
 EXPOSE 3000
 CMD ["rails", "s", "-b", "0.0.0.0"]
