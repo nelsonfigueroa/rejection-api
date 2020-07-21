@@ -1,5 +1,13 @@
 class RejectionsController < ApplicationController
 
+  def index
+    render json:
+'| HTTP Verb | Endpoint    | Description                    |
+|-----------|-------------|--------------------------------|
+| GET       | /rejections | Get a random rejection message |
+| POST      | /rejections | Create a rejection message     |'
+  end
+
   # GET /rejections
   def show
     render json: Rejection.all.sample
