@@ -1,6 +1,8 @@
 # Rejection API
 
-Simple JSON API built on Ruby on Rails. The API returns a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
+Get the true Software Engineer job search experience.
+
+This is a simple JSON API built on Ruby on Rails. The API returns a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
 
 # Running the API
 

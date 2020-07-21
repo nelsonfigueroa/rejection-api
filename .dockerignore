@@ -1,0 +1,12 @@
+README.md
+tmp
+db/*.sqlite3
+.gitignore
+log/*
+coverage
+.git
+.DS_Store
+.rubocop.yml
+.erb-lint.yml
+infrastructure
+.github
