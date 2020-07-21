@@ -18,6 +18,6 @@ class RejectionsController < ApplicationController
 
   private
     def rejection_params
-      params.require(:rejection).permit(:message)
+      params.permit(:message)
     end
 end
