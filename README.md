@@ -1,6 +1,6 @@
 # Rejection API
 
-Simple API built on Ruby on Rails. This is a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
+Simple API built on Ruby on Rails. The API returns a collection of rejection emails I have received this year. Messages have been slightly modified to remove company names.
 
 # Running the API
 
