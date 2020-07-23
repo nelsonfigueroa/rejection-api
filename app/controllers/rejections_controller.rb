@@ -1,5 +1,4 @@
 class RejectionsController < ApplicationController
-
   def index
     render json:
 '| HTTP Verb | Endpoint    | Description                    |
@@ -25,7 +24,8 @@ class RejectionsController < ApplicationController
   end
 
   private
-    def rejection_params
-      params.permit(:message)
-    end
+
+  def rejection_params
+    params.permit(:message)
+  end
 end
