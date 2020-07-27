@@ -35,7 +35,7 @@ curl 127.0.0.1:3000/rejections
 Response
 
 ```json
-{"id":20,"message":"We want to thank you for taking the time to complete our assessment regarding our Software Engineer position.  After careful review it has been decided that there is not a strong fit at the moment.   Thanks again for your interest in us and I hope you will remain enthusiastic about our company.","created_at":"2020-07-21T08:18:31.604Z","updated_at":"2020-07-21T08:18:31.604Z"}
+{"id":5,"message":"We regret to inform you that you are no longer being considered for the Junior Full-Stack Developer position. Thank you for your interest and for taking the time to apply.","created_at":"2020-07-27T23:21:49.043Z","updated_at":"2020-07-27T23:21:49.043Z"}
 ```
 
 Create a rejection
