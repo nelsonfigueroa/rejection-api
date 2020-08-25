@@ -18,7 +18,7 @@ Run the Docker image
 docker run -p 3000:3000 nfigueroa/rejection-api
 ```
 
-Now you can make API calls to [127.0.0.1:3000/rejection](http://127.0.0.1:3000/rejection). There are 2 endpoints.
+Now you can make API calls to [127.0.0.1:3000](http://127.0.0.1:3000). There are 2 endpoints.
 
 | HTTP Verb | Endpoint   | Description                    |
 |-----------|------------|--------------------------------|
