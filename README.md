@@ -12,7 +12,7 @@ Assuming you have Go installed, run `main.go`:
 go run main.go
 ```
 
-You can also download and run the binary on the releases section.
+You can also download and run the appropriate binary on [the releases section](https://github.com/nelsonfigueroa/rejection_api/releases/tag/v0.1)).
 
 Now you can make API calls to [127.0.0.1:3000](http://127.0.0.1:3000).
 
