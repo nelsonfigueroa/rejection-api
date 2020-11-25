@@ -1,8 +1,0 @@
-README.md
-tmp
-db/*.sqlite3
-.gitignore
-log/*
-.git
-.DS_Store
-test
