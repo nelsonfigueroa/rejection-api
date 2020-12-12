@@ -31,5 +31,5 @@ curl 127.0.0.1:3000/rejections
 Response
 
 ```json
-{"id":5,"message":"We regret to inform you that you are no longer being considered for the Junior Full-Stack Developer position. Thank you for your interest and for taking the time to apply.","created_at":"2020-07-27T23:21:49.043Z","updated_at":"2020-07-27T23:21:49.043Z"}
+{"id":"2","message":"Thank you for giving us the opportunity to consider you for employment. We have reviewed your background and qualifications and find that we do not have an appropriate position for you at this time."}
 ```
