@@ -9,13 +9,19 @@ This is a simple JSON API created with Go. The API returns a collection of rejec
 Assuming you have Go installed, get the necessary packages:
 
 ```
-go get github.com/gorilla/mux
+go get
 ```
 
-Then run `main.go`:
+Build the binary:
 
 ```
-go run main.go
+go build
+```
+
+Then run it:
+
+```
+./rejection-api
 ```
 
 Now you can make API calls to [127.0.0.1:3000](http://127.0.0.1:3000).
