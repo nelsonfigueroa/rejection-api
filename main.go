@@ -36,7 +36,7 @@ func parse_csv() {
 }
 
 func getRejection(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Content-Type", "application/json")       // JSON header so it displays properly in browsers
 	random_message := rejections[rand.Intn(len(rejections))] // random index
 	json.NewEncoder(w).Encode(random_message)                // JSON response
 
