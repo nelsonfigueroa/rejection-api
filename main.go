@@ -1,14 +1,14 @@
 package main
 
 import (
-	"encoding/csv"
+	"embed"
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
 	"log"
 	"math/rand"
 	"net/http"
-	"os"
+	"strings"
 )
 
 type Rejection struct {
@@ -18,20 +18,19 @@ type Rejection struct {
 
 var rejections []Rejection
 
+//go:embed rejections.csv
+var content embed.FS
+
 func parse_csv() {
-	file, err := os.Open("rejections.csv")
-	if err != nil {
-		log.Fatal(err)
-	}
-	defer file.Close()
+	data, _ := content.ReadFile("rejections.csv") // read from embedded file
+	stringdata := string(data)
 
-	lines, err := csv.NewReader(file).ReadAll()
-	if err != nil {
-		log.Fatal(err)
-	}
+	lines := strings.Split(stringdata, "\n")
 
-	for _, s := range lines {
-		rejections = append(rejections, Rejection{Id: s[0], Message: s[1]})
+	for _, line := range lines {
+		split := strings.SplitN(line, ",", 2)              // SplitN limits substrings to 2, so it only splits on first comma in this case.
+		split[1] = strings.Replace(split[1], "\"", "", -1) // replace double quotes in the string with nothing, if the final int input is < 0 then it replaces an infinite amount of quotes.
+		rejections = append(rejections, Rejection{Id: split[0], Message: split[1]})
 	}
 }
 
