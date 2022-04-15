@@ -2,11 +2,11 @@
 
 Get the true Software Engineer job search experience.
 
-This is a simple JSON API created with Go. The API returns a collection of rejection emails I received in 2020. Messages have been slightly modified to remove company names.
+This is a simple JSON API created with Go. The API returns a selection of rejection emails I've received throughout my career. Messages have been slightly modified to remove company names.
 
 # Running the API
 
-Assuming you have Go installed, get the necessary packages:
+Make sure you have Go installed, then get the necessary packages:
 
 ```
 go get
