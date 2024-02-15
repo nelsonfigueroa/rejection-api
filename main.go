@@ -25,15 +25,13 @@ var banner string = `
 ██╔══██╗██╔══╝  ██   ██║██╔══╝  ██║        ██║   ██║██║   ██║██║╚██╗██║
 ██║  ██║███████╗╚█████╔╝███████╗╚██████╗   ██║   ██║╚██████╔╝██║ ╚████║
 ╚═╝  ╚═╝╚══════╝ ╚════╝ ╚══════╝ ╚═════╝   ╚═╝   ╚═╝ ╚═════╝ ╚═╝  ╚═══╝
-                                                                       
- █████╗ ██████╗ ██╗                                                    
-██╔══██╗██╔══██╗██║                                                    
-███████║██████╔╝██║                                                    
-██╔══██║██╔═══╝ ██║                                                    
-██║  ██║██║     ██║                                                    
-╚═╝  ╚═╝╚═╝     ╚═╝                                                    
-                                                                       
-                                                           
+
+ █████╗ ██████╗ ██╗
+██╔══██╗██╔══██╗██║
+███████║██████╔╝██║
+██╔══██║██╔═══╝ ██║
+██║  ██║██║     ██║
+╚═╝  ╚═╝╚═╝     ╚═╝
 `
 
 //go:embed rejections.csv
@@ -46,9 +44,9 @@ func parse_csv() {
 	lines := strings.Split(stringdata, "\n")
 
 	for _, line := range lines {
-		split := strings.SplitN(line, ",", 2)              // SplitN limits substrings to 2, so it only splits on first comma in this case.
-		split[1] = strings.Replace(split[1], "\"", "", -1) // replace double quotes in the string with nothing, if the final int input is < 0 then it replaces an infinite amount of quotes.
-		rejections = append(rejections, Rejection{Id: split[0], Message: split[1]})
+		id, message, _ := strings.Cut(line, ",")         // split string on first instance of separator (comma).
+		message = strings.Replace(message, "\"", "", -1) // replace double quotes in the string with nothing, if the final int input is < 0 then it replaces an infinite amount of quotes.
+		rejections = append(rejections, Rejection{Id: id, Message: message})
 	}
 }
 
