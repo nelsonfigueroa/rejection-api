@@ -4,38 +4,54 @@ Get the true Software Engineer job search experience.
 
 This is a simple JSON API created with Go. The API returns a selection of rejection emails I've received throughout my career. Messages have been slightly modified to remove company names.
 
-# Running the API
+## Running the API by Building the Binary
 
-Make sure you have Go installed, then get the necessary packages:
+Make sure you have Go installed. Clone this repo, `cd` into the directory, then get the necessary packages:
 
-```
+```sh
 go get
 ```
 
 Build the binary:
 
-```
+```sh
 go build
 ```
 
 Then run it:
 
-```
+```sh
 ./rejection-api
 ```
 
-Now you can make API calls to [127.0.0.1:3000](http://127.0.0.1:3000).
+## Running with Docker
+
+Make sure Docker is running on your system. Clone this repo, `cd` into the directory, then run:
+
+```sh
+docker build . -t rejection-api
+```
+
+After the image is built, run it with:
+
+```sh
+docker run -p 80:80 rejection-api:latest
+```
+
+## Using the API
+
+You can make API calls to [127.0.0.1:80](http://127.0.0.1:80).
 
 | HTTP Verb | Endpoint   | Description                    |
 |-----------|------------|--------------------------------|
-| GET       | /rejections | Get a random rejection message 
+| GET       | /rejections | Get a random rejection message
 
 **Examples:**
 
 Get a random rejection:
 
-```
-curl 127.0.0.1:3000/rejections
+```sh
+curl -s 127.0.0.1:80/rejections
 ```
 
 Response
