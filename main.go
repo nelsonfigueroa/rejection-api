@@ -67,6 +67,6 @@ func main() {
 
 	r.HandleFunc("/rejections", getRejection).Methods("GET")
 
-	fmt.Println("Listening for requests at http://localhost:3000/rejections\n")
-	log.Fatal(http.ListenAndServe(":3000", r))
+	fmt.Println("Listening for requests at http://localhost:80/rejections\n")
+	log.Fatal(http.ListenAndServe(":80", r))
 }
